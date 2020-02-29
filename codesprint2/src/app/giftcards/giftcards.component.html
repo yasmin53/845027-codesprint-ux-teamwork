@@ -1,0 +1,32 @@
+
+  
+        <div class="col table-responsive pb-5">
+  
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>S. No</th>
+                <th>Buyer's Name</th>
+                <th>Shipping Address</th>
+                <th>Amount</th>
+                <th>Phone</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let card of cards">
+                <td>{{card.id}}</td>
+                <td>{{card.buyer_fname}} {{card.buyer_lname}}</td>
+                <td>{{card.city}}, {{card.state}}, {{card.country}} - {{card.pincode}}</td>
+                <td>{{card.rupees}}.{{card.paise}}</td>
+                <td>{{card.p1}}{{card.p2}}{{card.p3}}{{card.p4}}{{card.p5}}{{card.p6}}{{card.p7}}{{card.p8}}{{card.p9}}{{card.p10}}</td>
+                <td><button class="btn btn-danger" (click)="deleteCard(card)">Delete</button></td>
+                <td><button class="btn btn-primary" (click)="updateCard(card)">Update</button></td>
+            </tr>
+            </tbody>
+          </table>  
+        </div>
+   
+  
+ 
+  
+  
